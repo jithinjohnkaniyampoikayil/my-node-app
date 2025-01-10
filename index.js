@@ -1,6 +1,6 @@
 const http = require("http");
 
-const port = 80;
+const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   if (req.url === "/" && req.method === "GET") {
@@ -15,5 +15,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Server running at ${port}/ `);
+  console.log(`Server running on port ${port}`);
 });
