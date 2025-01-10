@@ -1,6 +1,6 @@
 const http = require("http");
 
-const port = 8080;
+const port = 80;
 
 const server = http.createServer((req, res) => {
   if (req.url === "/" && req.method === "GET") {
@@ -14,6 +14,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(() => {
+server.listen(port, () => {
   console.log(`Server running at ${port}/`);
 });
